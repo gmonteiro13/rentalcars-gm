@@ -1,4 +1,8 @@
 <header>
+<%= link_to "Voltar", car_categories_path %>
+
+<%= link_to "Editar", edit_car_category_path(@car_category) %>
+
 <h1><%= @car_category.name %></h1>
 </header>
 <dl> 
@@ -9,4 +13,4 @@
   <dt>Seguro de Terceiros</dt> 
   <dd><%= number_to_currency @car_category.third_party_insurance %></dd> 
 </dl>
-<%= link_to "Voltar", car_categories_path %>
+
