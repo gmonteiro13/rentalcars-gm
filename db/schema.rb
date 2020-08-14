@@ -21,4 +21,12 @@ ActiveRecord::Schema.define(version: 2020_08_10_171642) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "subsidiaries", force: :cascade do |t|
+    t.string "name"
+    t.string "CNPJ"
+    t.string "address"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
 end
