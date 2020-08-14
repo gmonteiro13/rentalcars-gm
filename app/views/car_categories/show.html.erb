@@ -14,3 +14,4 @@
   <dd><%= number_to_currency @car_category.third_party_insurance %></dd> 
 </dl>
 
+<%= link_to 'Apagar', car_category_path(@car_category), method: :delete, data: {confirm: 'Tem certeza que deseja apagar?'} %>
