@@ -5,4 +5,5 @@ Rails.application.routes.draw do
 
   resources :subsidiaries
 
+  resources :car_models
 end 

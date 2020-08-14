@@ -1,0 +1,9 @@
+<h1>Modelos de carro</h1>
+
+<% @car_models.each do |car_model|%>
+    <div>
+        <%=link_to "#{car_model.name} - #{car_model.year}", car_model %>
+        <%= car_model.manufacturer%>
+        <%= car_model.car_category.name %>
+    </div>
+<% end %>
