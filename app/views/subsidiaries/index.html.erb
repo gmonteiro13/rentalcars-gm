@@ -1,7 +1,11 @@
-<h1>Filiais</h1>
-
 <%= link_to "Voltar", root_path%>
+
+<h1>Filiais</h1>
 
 <% @subsidiaries.each do |subsidiary| %>
   <%= link_to subsidiary.name, subsidiary %>
+<% end %>
+
+<% if @subsidiaries.empty? %>
+  <h3>Nenhuma filial cadastrada</h3>
 <% end %>

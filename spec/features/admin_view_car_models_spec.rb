@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 feature 'Admin view car model' do
-    scenario 'and view list' do
+    scenario 'successfully' do
         car_category = CarCategory.create!(name: 'Top', daily_rate: 200, car_insurance: 50,
                                           third_party_insurance: 20)
         CarModel.create!(name: 'Ka', year: 2019, manufacturer: 'Ford',

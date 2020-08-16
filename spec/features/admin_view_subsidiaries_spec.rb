@@ -21,4 +21,33 @@ feature 'Admin view subsidiaries' do
         expect(page).to have_content('Centro SV')
 
     end
+
+    scenario 'and no car categories are created' do
+        visit root_path
+        click_on 'Filiais'
+    
+        expect(page).to have_content('Nenhuma filial cadastrada')
+    end
+
+    scenario 'and return to home page' do
+        Subsidiary.create!(name: 'Moema', CNPJ: '84306178000155',
+                       address: 'Alameda dos Nhambiquaras 1647')
+    
+        visit root_path
+        click_on 'Filiais'
+        click_on 'Voltar'
+    end
+
+    scenario 'and return to subsidiaries page' do
+        Subsidiary.create!(name: 'Moema', CNPJ: '84306178000155',
+                       address: 'Alameda dos Nhambiquaras 1647')
+    
+        visit root_path
+        click_on 'Filiais'
+        click_on 'Moema'
+        click_on 'Voltar'
+    
+        expect(current_path).to eq subsidiaries_path
+    end
+
 end
