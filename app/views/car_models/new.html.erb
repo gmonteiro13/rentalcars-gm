@@ -1,0 +1,37 @@
+<h1> Novo modelo de carro </h1>
+
+<%= form_with model: @car_model, local: true do |f| %>
+
+    <div>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    </div>
+
+    <div>
+    <%= f.label :year %>
+    <%= f.number_field :year %>
+    </div>
+
+    <div>
+    <%= f.label :manufacturer %>
+    <%= f.text_field :manufacturer %>
+    </div>
+
+    <div>
+    <%= f.label :motorization %>
+    <%= f.text_field :motorization %>
+    </div>
+
+    <div>
+    <%= f.label :car_category_id, 'Categoria de carro'%>
+    <%= f.collection_select(:car_category_id, CarCategory.all, :id, :name)%>
+    </div>
+   
+    <div>
+    <%= f.label :fuel_type %>
+    <%= f.text_field :fuel_type %>
+    </div>
+
+    <%= f.submit 'Enviar'%>
+
+<% end %>

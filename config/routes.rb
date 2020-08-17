@@ -5,5 +5,5 @@ Rails.application.routes.draw do
 
   resources :subsidiaries
 
-  resources :car_models
+  resources :car_models, only: [:index, :show, :new, :create]
 end 
