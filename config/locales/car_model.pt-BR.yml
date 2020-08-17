@@ -7,10 +7,10 @@ pt-BR:
         other: 'Modelos de carro'
     attributes:
       car_model:
-        name: Nome
-        year: Ano
-        manufacturer: Fabricante
-        motorization: Motorização
+        name: 'Nome'
+        year: 'Ano'
+        manufacturer: 'Fabricante'
+        motorization: 'Motorização'
         car_category: 'Categoria de carro'
         car_category_id: 'Categoria de carro'
-        fuel_type: Tipo de combustível
+        fuel_type: 'Tipo de combustível'

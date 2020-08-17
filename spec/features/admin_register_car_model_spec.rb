@@ -10,12 +10,13 @@ feature 'Admin register car model' do
     end
 
     scenario 'successfully' do
+        CarCategory.create!(name: 'Top', daily_rate: 100, car_insurance: 50, third_party_insurance: 50)
         visit root_path
         click_on 'Modelos de carro'
         click_on 'Registrar um novo modelo'
 
         fill_in 'Nome', with: 'Ka'
-        fill_in 'Ano', with: 2019
+        fill_in 'Ano', with: '2019'
         fill_in 'Fabricante', with: 'Ford'
         fill_in 'Motorização', with: '1.0'
         select 'Top', from: 'Categoria de carro'
