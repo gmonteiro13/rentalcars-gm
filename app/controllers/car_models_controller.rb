@@ -14,8 +14,12 @@ class CarModelsController < ApplicationController
 
     def create
       @car_model = CarModel.new(car_model_params)
-      @car_model.save
+      if @car_model.save
       redirect_to @car_model
+      else
+        @car_categories = CarCategory.all
+         render :new
+      end
     end
 
     private

@@ -2,6 +2,10 @@
 
 <%= link_to 'Voltar', root_path %>
 
+<% @car_model.errors.full_messages.each do |message| %>
+<p><%= message %></p>
+<% end %>
+
 <%= form_with model: @car_model, local: true do |f| %>
 
     <div>
