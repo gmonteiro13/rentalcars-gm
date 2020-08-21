@@ -1,7 +1,14 @@
+<% if user_signed_in? %>
+  <%= current_user.name %>
+  <%= link_to 'Sair' %>
+<% else %>
+  <%= link_to 'Entrar', new_user_session_path %>
+<% end %>
+
 <header>
   <h1 class="title">Rental Cars</h1>
   <h2>Bem vindo ao sistema de gestão de locação</h2>
 </header>
-<a href="<%= car_categories_path %>">Categorias</a>
+<%= link_to 'Categorias', car_categories_path %>
 <%= link_to 'Filiais', subsidiaries_path %>
 <%= link_to 'Modelos de carro', car_models_path %>
