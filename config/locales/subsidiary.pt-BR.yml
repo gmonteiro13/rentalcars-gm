@@ -9,4 +9,4 @@ pt-BR:
       subsidiary:
         name: 'Nome'
         address: 'Endereço'
-        CNPJ: 'CNPJ'
+        cnpj: 'CNPJ'

@@ -1,3 +1,8 @@
+<h1>Registro de filial</h1>
+
+<% @subsidiary.errors.full_messages.each do |message| %>
+    <p><%= message %></p>
+<% end %>
 <%= form_with model: @subsidiary, local: true do |f| %>
 
 <div>
@@ -11,8 +16,8 @@
 </div>
 
 <div>
-<%= f.label :CNPJ %>
-<%= f.text_field :CNPJ %>
+<%= f.label :cnpj %>
+<%= f.text_field :cnpj %>
 </div>
 
 <%= f.submit 'Enviar'%>

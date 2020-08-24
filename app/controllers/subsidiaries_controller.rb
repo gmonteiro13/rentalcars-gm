@@ -14,7 +14,8 @@ class SubsidiariesController < ApplicationController
     def create
         @subsidiary = Subsidiary.new(subsidiary_params)
       if @subsidiary.save
-        redirect_to @subsidiary
+        redirect_to @subsidiary, notice: 'Filial criada com sucesso!'
+        
       else
         render :new
       end
@@ -23,7 +24,6 @@ class SubsidiariesController < ApplicationController
     private
   
     def subsidiary_params
-      params.require(:subsidiary)
-            .permit(:name, :address, :CNPJ)
+      params.require(:subsidiary).permit(:name, :address, :cnpj)
     end
 end

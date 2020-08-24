@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_19_185622) do
+ActiveRecord::Schema.define(version: 2020_08_24_201236) do
 
   create_table "car_categories", force: :cascade do |t|
     t.string "name"
@@ -35,10 +35,8 @@ ActiveRecord::Schema.define(version: 2020_08_19_185622) do
 
   create_table "subsidiaries", force: :cascade do |t|
     t.string "name"
-    t.string "CNPJ"
+    t.string "cnpj"
     t.string "address"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "users", force: :cascade do |t|
