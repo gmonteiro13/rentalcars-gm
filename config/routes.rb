@@ -8,8 +8,8 @@ Rails.application.routes.draw do
 
   resources :car_models, only: [:index, :show, :new, :create]
 
-  get 'rentals/search', to: 'rentals#search'
-
-  resources :rentals, only: [:index, :show, :new, :create]
+  resources :rentals, only: [:index, :show, :new, :create] do
+    get 'search', on: :collection
+  end
 
 end 

@@ -1,0 +1,18 @@
+<dl>
+    <dt>Token</dt>
+    <dd><%= rental.token %></dd>
+    <dt>Data de início</dt>
+    <dd><%= l rental.start_date %></dd>
+    <dt>Data de término</dt>
+    <dd><%= l rental.end_date %></dd>
+    <dt>Cliente</dt>
+    <dd><%= rental.client.name %></dd>
+    <dd><%= rental.client.cpf %></dd>
+    <dd><%= rental.client.email %></dd>
+    <dt>Categoria de carro</dt>
+    <dd><%= rental.car_category.name %></dd>
+    <dt>Previsão de valor</dt>
+    <dd><%= number_to_currency rental.total %></dd>
+    <dt>Usuário</dt>
+    <dd><%= rental.user.email %></dd>
+</dl>
