@@ -1,5 +1,6 @@
 class RentalsController < ApplicationController
     def index
+        # @rentals = Rental.all
     end
 
     def show
@@ -19,6 +20,10 @@ class RentalsController < ApplicationController
         redirect_to @rental, notice: 'Agendamento realizado com sucesso!'
     end
 
+    def search
+        @rentals = Rental.where(token: params[:q])
+        render :index
+    end
     private
 
     def rental_params 

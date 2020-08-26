@@ -1,1 +1,30 @@
 <%= link_to 'Agendar nova locação', new_rental_path %>
+
+<%= form_with url: rentals_search_path, method: :get, local: true do |f| %>
+  <%= f.label :q, 'Busca de locação' %>
+  <%= f.text_field :q %>
+  <%= f.submit 'Buscar' %>
+<% end %>
+
+<% if @rentals.present? %>
+  <% @rentals.each do |rental| %>
+    <dl>
+      <dt>Token</dt>
+      <dd><%= rental.token %></dd>
+      <dt>Data de início</dt>
+      <dd><%= l rental.start_date %></dd>
+      <dt>Data de término</dt>
+      <dd><%= l rental.end_date %></dd>
+      <dt>Cliente</dt>
+      <dd><%= rental.client.name %></dd>
+      <dd><%= rental.client.cpf %></dd>
+      <dd><%= rental.client.email %></dd>
+      <dt>Categoria de carro</dt>
+      <dd><%= rental.car_category.name %></dd>
+      <dt>Previsão de valor</dt>
+      <dd><%= number_to_currency rental.total %></dd>
+      <dt>Usuário</dt>
+      <dd><%= rental.user.email %></dd>
+    </dl>
+  <% end %>
+<% end %>
