@@ -1,0 +1,20 @@
+<h1>Locação</h1>
+
+<dl>
+    <dt>Data de início</dt>
+    <dd><%= l @rental.start_date %>
+
+    <dt>Data de término</dt>
+    <dd><%= l @rental.end_date %>
+
+    <dt>Cliente</dt>
+    <dd><%= @rental.client.name %>
+    <dd><%= @rental.client.cpf %>
+    <dd><%= @rental.client.email %>
+
+    <dt>Categoria de carro</dt>
+    <dd><%= @rental.car_category.name %>
+
+    <dt>Previsão de valor</dt>
+    <dd><%= number_to_currency @rental.total%> </dd>
+</dl>
